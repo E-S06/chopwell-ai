@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        // Failsafe in case you forget to paste the key before deploying
-        if (!DEMO_API_KEY || DEMO_API_KEY === "AQ.Ab8RN6I3ZHoiB346z8cRChUy8pRUpyPqLJ-9086PbDDColZW_w") {
+        // Failsafe in case the key is missing or empty
+        if (!DEMO_API_KEY || DEMO_API_KEY.trim() === "") {
             alert('Please insert the disposable API key into app.js before testing.');
             return;
         }
