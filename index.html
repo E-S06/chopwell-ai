@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Nutrition Assistant MVP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Meal Planner AI</h1>
+            <p>Smart nutrition for everyday budgets.</p>
+        </header>
+
+        <main>
+            <form id="mealForm">
+                <div class="form-group">
+                    <label for="budget">Daily Budget (₦)</label>
+                    <input type="number" id="budget" placeholder="e.g. 2000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="condition">Health Condition</label>
+                    <select id="condition">
+                        <option value="none">None</option>
+                        <option value="diabetes">Diabetes</option>
+                        <option value="hypertension">Hypertension</option>
+                        <option value="pregnancy">Pregnancy</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="generateBtn">Generate Meal Plan</button>
+            </form>
+
+            <div id="loading" class="hidden">Consulting AI...</div>
+            <div id="result" class="hidden"></div>
+        </main>
+    </div>
+
+    <script src="foods.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
